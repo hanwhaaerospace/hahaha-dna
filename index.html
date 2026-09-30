@@ -301,31 +301,24 @@ const ROUNDS = [
   talk:"경력사원으로 합류한 나에게, 이 선택은 어떤 의미로 다가오나요?"}
 ];
 
-/* 2부 데이터팩 — 1부에서 다룬 사건(1952 창업, 1982 한양화학, 외환위기 매각, 2002 대한생명, 2014 빅딜)과 2011 핵심가치 선포는 제외 */
-const PACKS = {
- do:[
-  {id:"d1", y:"2012", t:"파산한 태양광 기업을 사다", b:"태양광 셀 생산 세계 1위였다가 파산한 독일 큐셀을 인수했다. 가동률이 20~30%에 그치던 회사는 1년여 만에 흑자로 돌아섰고, 미국 모듈 시장 1위 기업이 됐다.", s:"한경비즈니스(2026)"},
-  {id:"d2", y:"2021", t:"실패한 날 도착한 과일바구니", b:"누리호 1차 발사에서 위성 모사체가 목표 궤도에 오르지 못한 직후, 엔진 개발에 참여한 임직원 80여 명에게 한 사람씩 이름을 적은 편지와 과일바구니가 전달됐다.", s:"아시아투데이(2026)"},
-  {id:"d3", y:"2022", t:"다시 쏘아 올린 누리호", b:"이듬해 누리호 2차 발사가 성공하자, 개발진에게 포상휴가와 별도 격려금이 주어졌다. 실패를 탓하지 않고 다음 도전을 응원한 결과였다.", s:"아시아투데이(2026)"},
-  {id:"d4", y:"2023", t:"코로나를 뚫고 간 호주 성능시험", b:"출입국이 막힌 코로나19 시기에도 레드백 장갑차 개발진은 호주 현지에서 성능시험을 끝까지 마쳤고, 레드백은 호주 수출로 이어졌다.", s:"딜사이트"},
-  {id:"d5", y:"2014", t:"“마지막까지 현장을 지키겠다”", b:"모두가 위험하다고 본 이라크 비스마야 신도시 사업. 김 회장은 2013~2014년 10번 넘게 중동을 오가며 최악의 상황이 와도 현장을 지키겠다고 이라크 측을 안심시켰다.", s:"한국일보(2015)"}
- ],
- hs:[
-  {id:"h1", y:"2014", t:"사막으로 날아간 광어회 600인분", b:"내전 위험 속 이라크 현장을 지킨 직원들이 회를 먹고 싶어 한다는 이야기를 듣고, 협력업체 임직원과 외국인 노동자 대표까지 함께할 광어회 600인분을 서울에서 공수했다.", s:"아시아투데이, 이투데이"},
-  {id:"h2", y:"2007", t:"기러기 아빠 24명의 휴가", b:"가족을 해외에 보내고 홀로 남은 이른바 기러기 아빠 직원 24명에게 왕복 항공경비와 5일간의 휴가를 지원했다.", s:"아시아투데이(2026)"},
-  {id:"h3", y:"2004", t:"수능 앞둔 자녀에게 온 편지", b:"2004년부터 매년 수능을 앞둔 임직원 자녀에게 합격 기원 선물과 격려 편지를 보낸다. 받은 가족이 누적 8만 명에 이른다.", s:"아시아투데이(2026)"},
-  {id:"h4", y:"2010", t:"문 닫은 호텔, 지켜진 일자리", b:"더 플라자호텔이 리모델링으로 약 6개월간 문을 닫을 때, 직원 600여 명을 구조조정 대신 유급휴직 처리하고 그 기간 교육 프로그램을 운영했다.", s:"아시아투데이, 한경비즈니스"},
-  {id:"h5", y:"2026", t:"6만 9천 명의 삼계탕", b:"무더위 속 국내 임직원 6만 9천여 명 전원에게 보양식 세트를 보내며 각자의 자리에서 최선을 다한 임직원의 헌신에 감사를 전했다.", s:"아시아투데이(2026)"}
- ],
- jd:[
-  {id:"j1", y:"1982", t:"아버지가 못 지킨 약속", b:"선대회장이 지키지 못하고 떠난 리처드 워커 전 주한미국대사와의 회갑 약속을 1982년 김승연 회장이 대신 지켰고, 20년 뒤 팔순잔치까지 챙겼다.", s:"한경비즈니스(2026)"},
-  {id:"j2", y:"2010", t:"일회성 지원 대신 평생의 일자리", b:"천안함 피격 이후 단기적·물질적 지원보다 항구적인 일자리가 필요하다고 보고 유가족 채용을 시작했고, 해마다 그 약속을 지켜왔다.", s:"한화 뉴스룸, 한국일보(2015)"},
-  {id:"j3", y:"2002", t:"20년 넘게 이어온 협력사와의 자리", b:"2002년부터 우수 협력사를 격려하는 간담회를 해마다 열어 운영자금 대여, 입찰기회 확대 등을 지원하며 ‘함께 멀리’를 실천하고 있다.", s:"토요경제(2023)"},
-  {id:"j4", y:"2015", t:"편지로 전한 다짐", b:"천안함 5주기, 채용된 유가족 직원들에게 “제가 여러분의 든든한 가족이 되겠다”는 편지와 함께 애도기간 특별휴가를 주었다.", s:"한국일보, 뉴데일리(2015)"}
- ]
-};
-for(const k in PACKS) PACKS[k].sort((a,b)=>a.y.localeCompare(b.y));
-const ALLPACK = Object.values(PACKS).flat();
+/* 2부 기사팩 — 최근 기사 15건(최신순). 가치 라벨 없이 제공하고, 조가 직접 해석합니다. */
+const NEWS = [
+ {id:"n03", d:"2026.07", t:"적자 회사가 반년에 1조를 벌기까지", b:"한화가 인수한 지 약 3년, 옛 대우조선해양인 한화오션이 2026년 상반기 역대 최대 실적을 냈다. 앞으로 건조할 일감도 150척이 넘게 쌓여 있다.", s:"데일리안"},
+ {id:"n04", d:"2026.02", t:"실패해도 비용은 우리가 낸다", b:"한화에어로스페이스가 협력사의 첨단 R&D 비용을 전액 지원하고, 성과와 지식재산권을 함께 나누는 300억 원 규모 성과공유제를 시작했다. 동반성장펀드도 500억에서 1,500억 원으로 늘렸다.", s:"뉴스핌, 디지털데일리"},
+ {id:"n05", d:"2025.11", t:"민간이 처음 조립한 누리호", b:"누리호 4차 발사가 성공했다. 1~3차와 달리 체계종합기업인 한화에어로스페이스가 발사체 제작과 조립을 총괄한 첫 발사이자, 첫 야간 발사였다.", s:"사이언스타임즈, 뉴시스"},
+ {id:"n06", d:"2025.11", t:"준우승 팀에 보낸 60대의 오렌지 휴대폰", b:"한국시리즈 준우승 직후 팬들에게 ‘가장 뜨겁게 응원해 준 여러분을 잊지 않겠다’는 현수막을 걸고, 선수단과 스태프 60명에게는 오렌지색 휴대폰과 격려 메시지를 보냈다.", s:"서울신문, 경향신문"},
+ {id:"n07", d:"2025.10", t:"지든 이기든 쏘기로 한 불꽃", b:"한국시리즈 3차전, 구단주는 경기 결과와 관계없이 끝까지 자리를 지킨 팬들을 위해 불꽃쇼를 미리 준비했다. 1대 3으로 지던 경기가 8회 역전되면서 불꽃은 승리의 축포가 됐다.", s:"대전일보"},
+ {id:"n10", d:"2024.12", t:"문 닫기 직전의 미국 조선소를 사다", b:"‘유령 조선소’라 불리던 미국 필리 조선소를 약 1억 달러에 인수했다. 한국 기업의 첫 미국 조선소 인수였고, 이후 이곳은 미국 조선소로는 50년 만에 LNG 운반선을 수주했다.", s:"경향신문, 핸드메이커"},
+ {id:"n11", d:"2023.12", t:"정권이 바뀌어도 계약은 계약", b:"폴란드 정권 교체를 앞두고 K9 152문 2차 계약을 맺었지만, 새 집권 세력에서 ‘이전 정부의 계약은 무효가 될 수 있다’는 말이 나왔다. 이후 폴란드와의 협력은 정비와 신규 사업으로 넓어지고 있다.", s:"딜사이트"},
+ {id:"n12", d:"2023.12", t:"코로나를 뚫고 간 성능시험", b:"출입국이 막힌 코로나19 시기에도 레드백 장갑차 개발진은 호주 현지 성능시험을 끝까지 마쳤고, 레드백은 호주 수출로 이어졌다.", s:"딜사이트"},
+ {id:"n13", d:"2023.05", t:"15년 걸린 인수, 한화오션 출범", b:"2008년 처음 인수를 시도했던 대우조선해양이 한화오션으로 새로 출발했다. 누적 적자 개선, 인력 확보, 노조와의 관계 정립이 과제로 꼽혔다.", s:"파이낸셜리뷰, 굿모닝충청"},
+ {id:"n14", d:"2023.05", t:"처음으로 발사대에 선 민간 기업", b:"누리호 3차 발사에서 체계종합기업으로 선정된 한화에어로스페이스가 처음으로 발사 운용에 참여했다. 실용급 위성을 실어 나른 첫 발사였다.", s:"한국항공우주연구원"},
+ {id:"n15", d:"2022.09", t:"보증금을 잃었던 회사에 다시 서다", b:"2008년 대우조선해양 인수에 나서 이행보증금 3,150억 원을 냈다가 금융위기로 무산됐고, 긴 소송 끝에 일부만 돌려받았다. 14년 뒤 한화는 같은 회사 인수에 다시 나섰다.", s:"데일리안"},
+ {id:"n16", d:"2022.08", t:"K9 수출 역사상 최대 계약", b:"폴란드와 3조 2천억 원 규모의 K9 자주포 1차 실행계약을 맺었다. 약속한 물량을 차질 없이 대기 위해 창원 3사업장 생산라인을 늘리고 인력을 추가로 채용했다.", s:"뉴스토마토, 보안뉴스"},
+ {id:"n17", d:"2022.08", t:"협력사 20곳의 생산성을 함께 고치다", b:"한화 방산 4사가 한국생산성본부와 협약을 맺고, 중소 협력사 20곳에 전문가 현장 진단과 혁신 과제 개선을 지원하기로 했다.", s:"보안뉴스"},
+ {id:"n18", d:"2022.06", t:"다시 쏘아 올린 누리호", b:"누리호 2차 발사가 성공하자 개발진에게 포상휴가와 별도 격려금이 주어졌다. 1차 발사의 아쉬움 뒤에 찾아온 성공이었다.", s:"아시아투데이"},
+ {id:"n19", d:"2021.10", t:"실패한 날 도착한 과일바구니", b:"누리호 1차 발사에서 위성 모사체가 목표 궤도에 오르지 못한 직후, 엔진 개발에 참여한 임직원 80여 명에게 한 사람씩 이름을 적은 편지와 과일바구니가 전달됐다.", s:"아시아투데이"}
+];
 
 const STAGES = [
   {id:"lobby", g:"준비", n:"접속 대기"},
@@ -336,7 +329,7 @@ const STAGES = [
     {id:r.id+":reveal", g:"1부 선택의 순간", n:`${r.year} 실제 선택`}
   ]),
   {id:"dna", g:"1부 선택의 순간", n:"조별 DNA 결과"},
-  {id:"p2", g:"2부 DNA 수사", n:"조별 카드 작성"},
+  {id:"p2", g:"2부 DNA 수사", n:"기사 해석·나라면"},
   {id:"gallery", g:"2부 DNA 수사", n:"카드 갤러리"},
   {id:"wrap", g:"랩업", n:"나의 약속"}
 ];
@@ -424,7 +417,7 @@ function screenHome(){
     <div class="hero"><div class="years" aria-hidden="true">1952<br>1982<br>1999<br>2002<br>2014</div>
       <div class="chip hot">경력사원 입문과정</div>
       <h1 style="margin-top:16px">선택의 순간,<br>한화를 만들다</h1>
-      <p class="sub" style="color:#C6CEDC;margin:0">한화의 결정적 순간마다 우리 조라면 어떤 선택을 했을지 고르고, 실제 선택과 비교합니다. 2부에서는 핵심가치를 직접 골라 과거와 오늘의 사례로 이어 봅니다.</p>
+      <p class="sub" style="color:#C6CEDC;margin:0">한화의 결정적 순간마다 우리 조라면 어떤 선택을 했을지 고르고, 실제 선택과 비교합니다. 2부에서는 오늘의 한화 기사를 읽고 ‘나라면’을 이어 봅니다.</p>
     </div>
     ${MODE!=="sb"&&MODE!=="claude"?`<div class="card small" style="border-color:var(--no);color:#FFB4B4;margin-bottom:6px">서버(Supabase)에 연결되지 않았습니다. 다른 기기와 연동되지 않으니 진행자에게 알려주세요.${SB_ERR?`<br>${esc(SB_ERR)}`:""}</div>`:""}
     <button class="go" id="pm">교육생으로 입장</button>
@@ -506,7 +499,8 @@ function psig(){
   const votes=ROUNDS.map(r=>JSON.stringify(tVote(t,r.id)||null)).join(",");
   let extra="";
   if(st.endsWith(":reveal")) extra=JSON.stringify(ROUNDS.find(r=>r.id===rid)?counts(ROUNDS.find(r=>r.id===rid)):{});
-  if(st==="p2"||st==="gallery") extra=JSON.stringify(st==="gallery"?Object.keys(S.D).filter(k=>k.startsWith("c:")).map(k=>S.D[k]):tCard(t));
+  if(st==="p2") extra=JSON.stringify(tCard(t))+JSON.stringify(players().filter(p=>p.team===t).map(p=>[p.name,!!p.action]));
+  if(st==="gallery") extra=JSON.stringify(Object.keys(S.D).filter(k=>k.startsWith("c:")).map(k=>S.D[k]));
   if(st==="wrap") extra=S.me?.action||"";
   return [st, votes, extra, S.me?.team, JSON.stringify(S.sel), S.packView?1:0].join("|");
 }
@@ -543,7 +537,7 @@ function pPaint(){
     h=`${ptop("접속 완료")}<div class="fade"><h2>${esc(S.me.name)}님, 환영합니다</h2>
       <p class="sub">${t}조로 입장했습니다. 진행자가 시작하면 화면이 자동으로 바뀝니다.</p>
       <div class="card small" style="margin-top:18px;line-height:1.8">
-        <b>오늘의 흐름</b><br>1부 · 한화의 결정적 순간 4장면에서 우리 조의 선택을 제출합니다.<br>2부 · 우리 조가 고른 핵심가치를 과거 사례와 최근 기사로 이어 DNA 카드를 만듭니다.<br>랩업 · 나의 첫 한화 DNA 행동을 한 줄로 남깁니다.</div>
+        <b>오늘의 흐름</b><br>1부 · 한화의 결정적 순간 4장면에서 우리 조의 선택을 제출합니다.<br>2부 · 최근 한화 기사 하나를 조별로 해석하고, 각자 ‘나라면’을 씁니다.<br>랩업 · 나의 첫 한화 DNA 행동을 한 줄로 남깁니다.</div>
       <p class="small mute" style="margin-top:14px">같은 조 조원들: ${players().filter(p=>p.team===t).map(p=>esc(p.name)).join(", ")||"-"}</p>
       <button class="link" id="out">다른 이름·조로 다시 입장하기</button></div>`;
   }
@@ -594,7 +588,7 @@ function pPaint(){
   else if(st==="p2"){ const r=p2HTML(); h=r.h; btn=r.btn; }
   else if(st==="gallery"){
     const cs=submittedCards();
-    h=`${ptop("2부 · 카드 갤러리")}<div class="fade"><h2>DNA 카드 갤러리</h2><p class="sub small">같은 가치를 고른 조끼리 어떤 사례를 골랐는지 비교해 보세요.</p>
+    h=`${ptop("2부 · 카드 갤러리")}<div class="fade"><h2>DNA 카드 갤러리</h2><p class="sub small">같은 기사라도 조마다 다른 가치로 읽었는지 비교해 보세요.</p>
       <div class="cards">${cs.length?cs.map(c=>cardHTML(c)).join(""):`<div class="wait">아직 제출된 카드가 없습니다.</div>`}</div></div>`;
   }
   else if(st==="wrap"){
@@ -603,8 +597,8 @@ function pPaint(){
     h=`${ptop("랩업")}<div class="fade"><h2>선택은 달라도<br>기준은 이어졌습니다</h2>
       <div style="display:grid;gap:8px;margin-top:10px">${ROUNDS.map(r=>{const o=r.opts.find(x=>x.k===r.actual);return `<div class="card" style="padding:11px 14px;display:grid;grid-template-columns:46px 1fr auto;gap:8px;align-items:center;font-size:14.5px"><b style="font-family:var(--serif);color:var(--flame)">${r.year}</b><span>${r.short}</span><span style="display:flex;gap:4px">${Object.keys(o.v).map(vchip).join("")}</span></div>`}).join("")}</div>
       <p class="small" style="margin-top:14px">창업 이래의 한화정신인 신용과 의리는 2011년 도전·헌신·정도라는 행동 기준으로 다시 쓰였습니다. 그리고 그 기준은 이제 여러분의 선택으로 이어집니다.</p>
-      ${done?`<div class="promise"><div class="w2">${t}조 · ${esc(S.me.name)}</div><div class="t2">${esc(S.me.action)}</div></div>
-        <p class="small mute" style="margin-top:14px">화면을 캡처해 두었다가 100일 뒤에 다시 꺼내 보세요.</p><button class="link" id="redo">다시 쓰기</button>`
+      ${done?`<p class="small mute" style="margin-top:14px">2부에서 쓴 나의 행동이 오늘의 약속이 됩니다.</p><div class="promise"><div class="w2">${t}조 · ${esc(S.me.name)}</div><div class="t2">${esc(S.me.action)}</div></div>
+        <p class="small mute" style="margin-top:14px">화면을 캡처해 두었다가 100일 뒤에 다시 꺼내 보세요.</p><button class="link" id="redo">문장 다듬기</button>`
       :`<label class="lb" for="act" style="color:var(--ink);font-weight:700;font-size:15px">경력사원인 나의 첫 번째 한화 DNA 행동</label>
         <p class="hint">오늘 본 가치 중 하나를, 첫 100일 동안 할 행동 한 줄로</p>
         <textarea id="act" rows="2" maxlength="80" placeholder="예: 모르는 건 먼저 묻고, 들은 건 끝까지 챙기겠습니다">${esc(S.draftAct||"")}</textarea>
@@ -617,75 +611,81 @@ function pPaint(){
 
 /* ── 2부 (교육생) ── */
 function submittedCards(){ const out=[]; for(let t=1;t<=TEAMS;t++){ const c=tCard(t); if(c.submitted) out.push({...c,team:t}); } return out; }
-function cardHTML(c){
-  const p=ALLPACK.find(x=>x.id===c.pack);
-  return `<article class="dc"><div class="top"><span>${c.team}조 · 작성 ${esc(c.rep?.name||"")}</span>${c.value?`<span class="vn" style="background:${col(c.value)}">${VAL[c.value].n}</span>`:""}</div>
-    <h4>${p?`${p.y} ${esc(p.t)}`:""}</h4>
-    <dl><dt>찾은 최근 기사</dt><dd>${esc(c.title||"")}${c.url?`<br><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.url)}</a>`:""}</dd>
-    <dt>그 기사는 어떤 사건인가요</dt><dd>${esc(c.what||"")}</dd>
-    <dt>왜 이 사례를 골랐나요</dt><dd>${esc(c.why||"")}</dd>
-    <dt>왜 ${c.value?VAL[c.value].n:"이 가치"}와 연결되나요</dt><dd>${esc(c.link||"")}</dd></dl></article>`;
+const newsOf=id=>NEWS.find(x=>x.id===id);
+function cardHTML(c, withPeople){
+  const n=newsOf(c.news); const vs=c.values||[];
+  const ppl = withPeople ? players().filter(p=>p.team===c.team) : [];
+  return `<article class="dc"><div class="top"><span>${c.team}조${c.rep?` · 대표 ${esc(c.rep.name)}`:""}</span><span style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">${vs.map(k=>`<span class="vn" style="background:${col(k)}">${VAL[k].n}</span>`).join("")}</span></div>
+    <h4>${n?`${n.d} ${esc(n.t)}`:"기사 고르는 중"}</h4>
+    ${n?`<p class="small" style="color:#AEB9CC;margin:4px 0 0">${esc(n.b)}</p>`:""}
+    <dl><dt>기사 속 한화는 무엇을 선택했나</dt><dd>${esc(c.what||"")}</dd>
+    <dt>우리 조는 왜 이 가치로 읽었나</dt><dd>${esc(c.why||"")}</dd>
+    ${withPeople?`<dt>조원 개인 작성 (${ppl.filter(p=>p.action).length}/${ppl.length}명)</dt><dd>${ppl.map(p=>`<b>${esc(p.name)}</b> · 기사 속 직원이라면: ${esc(p.asIf||"-")}<br>나의 행동: ${esc(p.action||"-")}`).join("<br><br>")||"-"}</dd>`:""}</dl></article>`;
+}
+function newsList(sel, clickable){
+  return `<div class="pack">${NEWS.map(x=>`<${clickable?"button":"div"} class="pc ${x.id===sel?"on":""}" ${clickable?`data-news="${x.id}"`:""}><span class="py" style="font-size:15px">${x.d}</span><span><span class="pt">${esc(x.t)}</span><span class="pb">${esc(x.b)}</span><span class="src">출처: ${esc(x.s)}</span></span></${clickable?"button":"div"}>`).join("")}</div>`;
+}
+function mineHTML(){
+  const me=S.me;
+  return `<div class="card" style="margin-top:22px;border-color:var(--flame)">
+    <div style="font-weight:800;font-size:16px">나의 생각 <span class="small mute" style="font-weight:500">· 조원 모두 각자 작성</span></div>
+    <label class="lb" for="m1" style="color:var(--ink);font-weight:700">내가 이 기사 속 직원이었다면?</label>
+    <textarea id="m1" data-m="asIf" rows="2" maxlength="200" placeholder="그 자리에 있었다면 나는 어떻게 했을까">${esc(S.mine?.asIf ?? me.asIf ?? "")}</textarea>
+    <label class="lb" for="m2" style="color:var(--ink);font-weight:700">나의 첫 100일 한화 DNA 행동 한 줄</label>
+    <p class="hint">내 자리에서 이 가치가 시험받는 순간, 나는 이렇게 하겠다</p>
+    <textarea id="m2" data-m="action" rows="2" maxlength="80" placeholder="예: 모르는 건 먼저 묻고, 들은 건 끝까지 챙기겠습니다">${esc(S.mine?.action ?? me.action ?? "")}</textarea>
+    <button class="ghost" id="minego" style="margin-top:12px;border-color:var(--flame);color:var(--ink)">${me.action?"수정 내용 저장":"나의 생각 제출"}</button>
+    <div class="saved" id="minesaved">${me.action?"제출 완료 · 랩업 약속 카드로 이어집니다":""}</div></div>`;
 }
 function p2HTML(){
   const t=S.me.team, c=tCard(t), isRep=c.rep?.pid===S.pid;
-  let h=ptop("2부 · DNA 수사"), btn="";
+  let h=ptop("2부 · 기사 해석"), btn="";
   const roles=`<div class="roles">
-      <div class="role"><span class="ic">✍️</span><span><b>대표 작성자 1명</b>이 폰에 입력합니다. 다른 조원은 입력하지 않아도 됩니다.</span></div>
-      <div class="role"><span class="ic">🔎</span><span><b>기사 탐색 2명</b>은 한화 뉴스룸, 포털 뉴스에서 최근 3년 안의 기사를 찾습니다.</span></div>
-      <div class="role"><span class="ic">🎤</span><span><b>발표자 1명</b>은 갤러리 시간에 1분 동안 우리 조 카드를 소개합니다.</span></div>
-      <div class="role"><span class="ic">⏱️</span><span><b>나머지 조원</b>은 왜 이 가치인지 근거를 함께 다듬습니다.</span></div></div>`;
+      <div class="role"><span class="ic">✍️</span><span><b>대표 작성자 1명</b>이 조의 해석을 폰에 입력합니다.</span></div>
+      <div class="role"><span class="ic">📰</span><span><b>기사 읽기</b>는 조원이 나눠 맡아 후보 기사를 추립니다.</span></div>
+      <div class="role"><span class="ic">🎤</span><span><b>발표자 1명</b>은 갤러리 시간에 1분 동안 우리 조 해석을 소개합니다.</span></div>
+      <div class="role"><span class="ic">🙋</span><span><b>모두</b> 각자 폰으로 ‘나의 생각’을 씁니다.</span></div></div>`;
+  const guide=`<div class="card small" style="line-height:1.7;margin-top:12px">기사팩 안에서 <b>누군가 무언가를 선택하거나 결단한 장면</b>을 골라 보세요. 정답 가치는 정해져 있지 않습니다. 신용·의리·도전·헌신·정도 중 여러 개로 읽어도 되고, 조원끼리 의견이 갈려도 좋습니다.</div>`;
   if(!c.rep){
-    h+=`<div class="fade"><h2>먼저 역할을 나눠요</h2><p class="sub small">2부는 조별로 카드 한 장을 만듭니다. 대표 작성자를 정한 뒤, 그 사람이 아래 버튼을 눌러 주세요.</p>${roles}</div>`;
+    h+=`<div class="fade"><h2>오늘의 한화, 기사로 읽기</h2><p class="sub small">1부가 그때 회장님의 선택이었다면, 2부는 오늘 한화의 선택입니다. 기사 하나를 골라 우리 조의 해석을 남기고, 각자 ‘나라면’을 씁니다.</p>${guide}<h3>역할을 나눠요</h3>${roles}</div>`;
     btn=`<button class="go" id="claim">제가 대표로 작성할게요</button>`;
     return {h,btn};
   }
-  const step = !c.value?1:(!c.pack?2:3);
+  const n=newsOf(c.news);
   if(!isRep){
-    const pv=c.value?PACKS[c.value]:null, p=c.pack&&ALLPACK.find(x=>x.id===c.pack);
-    h+=`<div class="fade"><h2>${esc(c.rep.name)}님이 우리 조 카드를 작성 중입니다</h2>
-      <div class="steps">${[1,2,3].map(i=>`<span class="${i<=step?"on":""}"></span>`).join("")}</div>
-      ${c.submitted?`<div class="banner">✓ <span>우리 조 카드 <b>제출 완료</b></span></div><div style="margin-top:12px">${cardHTML({...c,team:t})}</div>`:`
-      <div class="card small" style="line-height:1.8">
-        <div>핵심가치 <b>${c.value?VAL[c.value].n:"고르는 중"}</b></div>
-        <div>과거 사례 <b>${p?`${p.y} ${esc(p.t)}`:(c.value?"고르는 중":"-")}</b></div>
-        ${c.title?`<div>최근 기사 <b>${esc(c.title)}</b></div>`:""}
-      </div>
-      <h3>내 역할 확인</h3>${roles}
-      ${pv?`<h3>${VAL[c.value].n} 데이터팩</h3><p class="hint">기사를 찾을 때 참고하세요. 선택은 대표 작성자가 합니다.</p><div class="pack">${pv.map(x=>`<div class="pc ${x.id===c.pack?"on":""}"><span class="py">${x.y}</span><span><span class="pt">${esc(x.t)}</span><span class="pb">${esc(x.b)}</span></span></div>`).join("")}</div>`:""}`}
+    h+=`<div class="fade"><h2>${esc(c.rep.name)}님이 우리 조 해석을 작성 중입니다</h2>
+      ${c.submitted?`<div class="banner">✓ <span>우리 조 카드 <b>제출 완료</b></span></div>`:""}
+      <div style="margin-top:12px">${cardHTML({...c,team:t},false)}</div>
+      ${n?mineHTML():`<p class="small mute" style="margin-top:14px">대표가 기사를 고르면 ‘나의 생각’을 쓸 수 있습니다. 그동안 기사팩을 함께 읽어 주세요.</p>`}
+      <h3>기사팩</h3><p class="hint">후보 기사를 대표에게 추천해 주세요. 선택은 대표가 합니다.</p>${newsList(c.news,false)}
+      <h3>역할</h3>${roles}
       <button class="link" id="takeover" style="margin-top:16px">대표 작성자가 바뀌었나요? 제가 이어서 작성하기</button></div>`;
     return {h,btn};
   }
-  // 대표 작성자
   if(c.submitted){
-    h+=`<div class="fade"><h2>우리 조 카드를 제출했습니다</h2>${cardHTML({...c,team:t})}<button class="ghost" id="unsubmit">수정하기</button></div>`;
+    h+=`<div class="fade"><h2>우리 조 카드를 제출했습니다</h2>${cardHTML({...c,team:t},false)}<button class="ghost" id="unsubmit">조 카드 수정하기</button>${mineHTML()}</div>`;
     return {h,btn};
   }
-  h+=`<div class="fade"><div class="steps">${[1,2,3].map(i=>`<span class="${i<=step?"on":""}"></span>`).join("")}</div>`;
+  const step=!n?1:2;
+  h+=`<div class="fade"><div class="steps">${[1,2].map(i=>`<span class="${i<=step?"on":""}"></span>`).join("")}</div>`;
   if(step===1){
-    h+=`<h2>우리 조의 핵심가치를 골라 주세요</h2><p class="sub small">조원들과 이야기한 뒤 하나를 고르면 그 가치의 데이터팩이 열립니다.</p>
-      <div class="vpick">${CORE.map(k=>`<button class="vbtn" data-val="${k}"><span class="vn" style="color:${col(k)}">${VAL[k].n}</span><span class="vd">${VAL[k].d}</span></button>`).join("")}</div>`;
-  } else if(step===2){
-    h+=`<h2>${VAL[c.value].n} 데이터팩</h2><p class="sub small">‘${VAL[c.value].n}’이 가장 잘 드러난다고 생각하는 과거 사례 하나를 골라 주세요.</p>
-      <div class="pack">${PACKS[c.value].map(x=>`<button class="pc ${S.sel.pack===x.id?"on":""}" data-pack="${x.id}"><span class="py">${x.y}</span><span><span class="pt">${esc(x.t)}</span><span class="pb">${esc(x.b)}</span><span class="src">출처: ${esc(x.s)}</span></span></button>`).join("")}</div>
-      <button class="link" id="reval">핵심가치 다시 고르기</button>`;
-    btn=`<button class="go" id="packgo" ${S.sel.pack?"":"disabled"}>이 사례로 카드 쓰기</button>`;
+    h+=`<h2>우리 조가 읽을 기사 하나</h2><p class="sub small">최신순입니다. 조원들과 이야기한 뒤 하나를 골라 주세요.</p>${guide}${newsList(S.sel.news,true)}`;
+    btn=`<button class="go" id="newsgo" ${S.sel.news?"":"disabled"}>이 기사로 해석하기</button>`;
   } else {
-    const p=ALLPACK.find(x=>x.id===c.pack);
-    const ok=(c.title||"").trim()&&(c.what||"").trim()&&(c.why||"").trim()&&(c.link||"").trim();
-    h+=`<h2>${t}조 DNA 카드</h2>
-      <div class="picked"><b>${VAL[c.value].n}</b><span>${p.y} ${esc(p.t)}</span></div>
-      <button class="link" id="repack">과거 사례 다시 고르기</button>
-      <label class="lb" for="f1" style="color:var(--ink);font-weight:700">찾은 최근 기사 제목</label><p class="hint">최근 3년 안에 이 가치가 드러난 한화 기사</p>
-      <input id="f1" data-f="title" maxlength="80" value="${esc(c.title||"")}" placeholder="기사 제목">
-      <label class="lb" for="f2">기사 링크 (선택)</label><input id="f2" data-f="url" inputmode="url" maxlength="300" value="${esc(c.url||"")}" placeholder="https://">
-      <label class="lb" for="f3" style="color:var(--ink);font-weight:700">그 기사는 어떤 사건인가요?</label>
-      <textarea id="f3" data-f="what" rows="3" maxlength="300" placeholder="무슨 일이 있었는지 두세 문장으로">${esc(c.what||"")}</textarea>
-      <label class="lb" for="f4" style="color:var(--ink);font-weight:700">왜 이 사례를 골랐나요?</label>
-      <textarea id="f4" data-f="why" rows="3" maxlength="300" placeholder="과거 사례와 최근 기사를 고른 이유">${esc(c.why||"")}</textarea>
-      <label class="lb" for="f5" style="color:var(--ink);font-weight:700">왜 ‘${VAL[c.value].n}’과 연결된다고 생각하나요?</label>
-      <textarea id="f5" data-f="link" rows="3" maxlength="300" placeholder="두 사례를 이어주는 우리 조의 해석">${esc(c.link||"")}</textarea>
+    const vs=c.values||[];
+    const ok=vs.length&&(c.what||"").trim()&&(c.why||"").trim();
+    h+=`<h2>${t}조의 해석</h2>
+      <div class="picked"><b>${n.d}</b><span>${esc(n.t)}</span></div>
+      <button class="link" id="renews">기사 다시 고르기</button>
+      <label class="lb" for="f1" style="color:var(--ink);font-weight:700">기사 속 한화는 무엇을 선택했나요?</label>
+      <textarea id="f1" data-f="what" rows="3" maxlength="300" placeholder="누가, 어떤 상황에서, 무엇을 택했는지">${esc(c.what||"")}</textarea>
+      <label class="lb" style="color:var(--ink);font-weight:700">어떤 가치로 읽히나요? (여러 개 가능)</label>
+      <div class="exs">${GAUGE.map(k=>`<button data-v="${k}" style="${vs.includes(k)?`background:${col(k)};color:#08101F;border-color:transparent;font-weight:700`:""}">${VAL[k].n}</button>`).join("")}</div>
+      <label class="lb" for="f2" style="color:var(--ink);font-weight:700">왜 그 가치로 읽었나요?</label>
+      <textarea id="f2" data-f="why" rows="3" maxlength="300" placeholder="조원들 사이에 다른 해석이 있었다면 그것도 함께">${esc(c.why||"")}</textarea>
       <div class="saved" id="saved"></div>`;
     btn=`<button class="go" id="cardgo" ${ok?"":"disabled"}>우리 조 카드 제출하기</button>`;
+    h+=mineHTML();
   }
   h+=`</div>`;
   return {h,btn};
@@ -705,19 +705,24 @@ function bindP(){
   const saveCard=async(patch)=>{ const k=`c:${S.me.team}`; const c={...tCard(S.me.team),...patch,at:Date.now()}; S.D[k]=c; await DB.put(k,c); };
   q("#claim")&&(q("#claim").onclick=async()=>{ await saveCard({rep:{pid:S.pid,name:S.me.name}}); pPaint(); S.sig=psig(); });
   q("#takeover")&&(q("#takeover").onclick=async()=>{ if(!confirm("이제부터 내가 대표로 작성할까요? 지금까지 쓴 내용은 그대로 이어집니다.")) return; await saveCard({rep:{pid:S.pid,name:S.me.name}}); pPaint(); S.sig=psig(); });
-  el.querySelectorAll("[data-val]").forEach(b=>b.onclick=async()=>{ S.sel.pack=null; await saveCard({value:b.dataset.val,pack:null}); pPaint(); S.sig=psig(); });
-  el.querySelectorAll("[data-pack]").forEach(b=>b.onclick=()=>{ S.sel.pack=b.dataset.pack; pPaint(); S.sig=psig(); });
-  q("#packgo")&&(q("#packgo").onclick=async()=>{ await saveCard({pack:S.sel.pack}); pPaint(); S.sig=psig(); window.scrollTo(0,0); });
-  q("#reval")&&(q("#reval").onclick=async()=>{ S.sel.pack=null; await saveCard({value:null,pack:null}); pPaint(); S.sig=psig(); });
-  q("#repack")&&(q("#repack").onclick=async()=>{ S.sel.pack=tCard(S.me.team).pack; await saveCard({pack:null}); pPaint(); S.sig=psig(); });
+  el.querySelectorAll("[data-news]").forEach(b=>b.onclick=()=>{ S.sel.news=b.dataset.news; pPaint(); S.sig=psig(); });
+  q("#newsgo")&&(q("#newsgo").onclick=async()=>{ await saveCard({news:S.sel.news}); pPaint(); S.sig=psig(); window.scrollTo(0,0); });
+  q("#renews")&&(q("#renews").onclick=async()=>{ S.sel.news=tCard(S.me.team).news; await saveCard({news:null}); pPaint(); S.sig=psig(); });
+  el.querySelectorAll("[data-v]").forEach(b=>b.onclick=async()=>{ const c=tCard(S.me.team); const vs=new Set(c.values||[]); vs.has(b.dataset.v)?vs.delete(b.dataset.v):vs.add(b.dataset.v); await saveCard({values:GAUGE.filter(k=>vs.has(k))}); pPaint(); S.sig=psig(); });
   el.querySelectorAll("[data-f]").forEach(inp=>inp.oninput=()=>{
     const k=`c:${S.me.team}`; const c={...tCard(S.me.team)}; c[inp.dataset.f]=inp.value; S.D[k]=c;
-    const ok=(c.title||"").trim()&&(c.what||"").trim()&&(c.why||"").trim()&&(c.link||"").trim();
+    const ok=(c.values||[]).length&&(c.what||"").trim()&&(c.why||"").trim();
     q("#cardgo").disabled=!ok; const sv=q("#saved"); if(sv) sv.textContent="작성 중…";
     clearTimeout(draftTimer); draftTimer=setTimeout(async()=>{ await DB.put(k,{...S.D[k],at:Date.now()}); if(q("#saved")) q("#saved").textContent="조원들 화면에도 반영됐습니다"; S.sig=psig(); },700);
   });
   q("#cardgo")&&(q("#cardgo").onclick=async()=>{ clearTimeout(draftTimer); await saveCard({submitted:true}); pPaint(); S.sig=psig(); window.scrollTo(0,0); });
   q("#unsubmit")&&(q("#unsubmit").onclick=async()=>{ await saveCard({submitted:false}); pPaint(); S.sig=psig(); });
+  el.querySelectorAll("[data-m]").forEach(inp=>inp.oninput=()=>{ S.mine={asIf:q("#m1").value, action:q("#m2").value}; const sv=q("#minesaved"); if(sv) sv.textContent="저장 전입니다 · 아래 버튼을 눌러 주세요"; });
+  q("#minego")&&(q("#minego").onclick=async()=>{
+    const asIf=q("#m1").value.trim(), action=q("#m2").value.trim();
+    if(!action){ q("#minesaved").textContent="행동 한 줄은 꼭 적어 주세요"; return; }
+    S.me={...S.me,asIf,action}; S.mine=null; await DB.put(`p:${S.pid}`,S.me); S.D[`p:${S.pid}`]=S.me; pPaint(); S.sig=psig();
+  });
   // 랩업
   const act=q("#act"); if(act) act.oninput=()=>{ S.draftAct=act.value; q("#actgo").disabled=!act.value.trim(); };
   el.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>{ S.draftAct=b.dataset.ex; const a=q("#act"); a.value=S.draftAct; q("#actgo").disabled=false; });
@@ -736,7 +741,7 @@ function adminPaint(force){
   const sb=(id,n)=>`<button data-stage="${id}" class="${id===st?"on":""}">${n}</button>`;
   let groups=`<div class="grp">준비</div>${sb("lobby","접속 대기")}<div class="grp">1부 선택의 순간</div>${sb("intro","오프닝")}`;
   ROUNDS.forEach(r=>{ groups+=`<div class="rrow"><span>${r.year}</span>${sb(r.id+":scene","상황")}${sb(r.id+":choose","선택")}${sb(r.id+":reveal","공개")}</div>`; });
-  groups+=`${sb("dna","조별 DNA 결과")}<div class="grp">2부 DNA 수사</div>${sb("p2","조별 카드 작성")}${sb("gallery","카드 갤러리")}<div class="grp">랩업</div>${sb("wrap","나의 약속")}`;
+  groups+=`${sb("dna","조별 DNA 결과")}<div class="grp">2부 DNA 수사</div>${sb("p2","기사 해석·나라면")}${sb("gallery","카드 갤러리")}<div class="grp">랩업</div>${sb("wrap","나의 약속")}`;
   const needTimer = st.endsWith(":choose")||st==="p2"||st.endsWith(":scene");
   el.innerHTML=`<div class="w">
     <div class="adm-top"><b>관리자</b><span class="mute">세션</span><span class="code">${esc(S.code)}</span>
@@ -797,18 +802,24 @@ function adminStage(st){
       ${Array.from({length:TEAMS},(_,i)=>{const t=i+1,g=gaugesOf(t),top=topOf(g),same=ROUNDS.filter(r=>tVote(t,r.id)?.opt===r.actual).length;return `<tr><td><b>${t}조</b></td>${GAUGE.map(k=>`<td>${g[k]}</td>`).join("")}<td>${top?top.map(k=>VAL[k].n).join("·"):"-"}</td><td>${same}/${ROUNDS.length}</td></tr>`}).join("")}</tbody></table>`;
   }
   if(st==="p2"){
-    const dist=CORE.map(k=>`${vchip(k)} <b>${Array.from({length:TEAMS},(_,i)=>tCard(i+1).value).filter(v=>v===k).length}</b>조`).join("&nbsp;&nbsp;&nbsp;");
-    return `<h2>2부 조별 작성 현황</h2><p class="sub">${dist}</p>
-      <div class="tgrid">${Array.from({length:TEAMS},(_,i)=>{const t=i+1,c=tCard(t),p=c.pack&&ALLPACK.find(x=>x.id===c.pack);
-        const stt=c.submitted?"제출 완료":!c.rep?"대표 미정":!c.value?"가치 고르는 중":!p?"사례 고르는 중":"작성 중";
-        return `<button class="tile ${c.submitted?"done":""}" data-open="${t}"><div class="tn">${t}조 ${c.value?`<span class="chip" style="padding:1px 8px;border-color:transparent;background:${col(c.value)};color:#08101F;font-weight:700">${VAL[c.value].n}</span>`:""}</div>
-          <div class="ts">${c.rep?`대표 ${esc(c.rep.name)}`:""}</div><div class="ts">${p?`${p.y} ${esc(p.t)}`:""}</div><div class="ts" style="color:${c.submitted?"var(--ok)":"var(--mute)"};font-weight:600">${stt}</div></button>`}).join("")}</div>
-      <p class="small mute" style="margin-top:10px">조를 누르면 작성 중인 내용을 볼 수 있습니다.</p>`;
+    const cnt=k=>Array.from({length:TEAMS},(_,i)=>tCard(i+1).values||[]).filter(v=>v.includes(k)).length;
+    const dist=GAUGE.map(k=>`${vchip(k)} <b>${cnt(k)}</b>`).join("&nbsp;&nbsp;");
+    const ind=ps.filter(p=>p.action||p.asIf).sort((a,b)=>a.team-b.team);
+    return `<h2>2부 조별 작성 현황</h2><p class="sub">조별로 읽은 가치: ${dist}</p>
+      <div class="tgrid">${Array.from({length:TEAMS},(_,i)=>{const t=i+1,c=tCard(t),n=c.news&&newsOf(c.news),m=ps.filter(p=>p.team===t);
+        const stt=c.submitted?"조 카드 제출":!c.rep?"대표 미정":!n?"기사 고르는 중":"해석 작성 중";
+        return `<button class="tile ${c.submitted?"done":""}" data-open="${t}"><div class="tn">${t}조 <span class="mute" style="font-weight:500;font-size:12.5px">개인 ${m.filter(p=>p.action).length}/${m.length}</span></div>
+          <div class="ts">${n?`${n.d} ${esc(n.t)}`:(c.rep?`대표 ${esc(c.rep.name)}`:"")}</div>
+          <div class="ts">${(c.values||[]).map(k=>VAL[k].n).join("·")}</div><div class="ts" style="color:${c.submitted?"var(--ok)":"var(--mute)"};font-weight:600">${stt}</div></button>`}).join("")}</div>
+      <p class="small mute" style="margin-top:10px">조를 누르면 조 해석과 조원 개인 작성 내용을 함께 볼 수 있습니다.</p>
+      <h3>개인 작성 전체 <span class="mute" style="font-weight:500">${ps.filter(p=>p.action).length}/${ps.length}명 제출</span></h3>
+      <table class="t"><thead><tr><th style="width:60px">조</th><th style="width:90px">이름</th><th>내가 이 기사 속 직원이었다면</th><th>나의 첫 100일 행동</th></tr></thead><tbody>
+      ${ind.map(p=>`<tr><td>${p.team}조</td><td>${esc(p.name)}</td><td>${esc(p.asIf||"-")}</td><td>${esc(p.action||"-")}</td></tr>`).join("")||`<tr><td colspan="4" class="mute">아직 작성한 사람이 없습니다.</td></tr>`}</tbody></table>`;
   }
   if(st==="gallery"){
     const cs=submittedCards();
     return `<h2>DNA 카드 갤러리 <span class="mute" style="font-family:var(--sans);font-size:18px">${cs.length}/${TEAMS}조 제출</span></h2>
-      ${CORE.map(k=>{const g=cs.filter(c=>c.value===k); if(!g.length) return ""; return `<h3>${VAL[k].n} · ${g.length}개 조</h3><div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))">${g.map(cardHTML).join("")}</div>`}).join("")||`<div class="card mute">아직 제출된 카드가 없습니다.</div>`}`;
+      ${cs.length?`<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))">${cs.map(c=>cardHTML(c,false)).join("")}</div>`:`<div class="card mute">아직 제출된 카드가 없습니다.</div>`}`;
   }
   if(st==="wrap"){
     const acts=ps.filter(p=>p.action);
@@ -818,7 +829,7 @@ function adminStage(st){
   return "";
 }
 function modalHTML(){ const t=+S.modal, c=tCard(t);
-  return `<div class="modal" id="modal"><div class="box">${c.rep?cardHTML({...c,team:t}):`<div class="card">${t}조는 아직 대표 작성자를 정하지 않았습니다.</div>`}<button class="ghost" id="mclose">닫기</button></div></div>`; }
+  return `<div class="modal" id="modal"><div class="box">${c.rep?cardHTML({...c,team:t},true):`<div class="card">${t}조는 아직 대표 작성자를 정하지 않았습니다.</div>`}<button class="ghost" id="mclose">닫기</button></div></div>`; }
 function bindA(){
   const q=s=>el.querySelector(s);
   const setStage=async id=>{ const c={...ctrl(),stage:id,at:Date.now()}; S.D.ctrl=c; await DB.put("ctrl",c); if(id.endsWith(":choose")&&!S.timer.run){ S.timer.left=180; } adminPaint(true); };

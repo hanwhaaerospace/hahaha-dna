@@ -301,23 +301,22 @@ const ROUNDS = [
   talk:"경력사원으로 합류한 나에게, 이 선택은 어떤 의미로 다가오나요?"}
 ];
 
-/* 2부 기사팩 — 최근 기사 15건(최신순). 가치 라벨 없이 제공하고, 조가 직접 해석합니다. */
+/* 2부 기사팩 — 최근 기사 14건(최신순). 결정·긴장이 드러나게 서술하고 가치 라벨은 붙이지 않습니다. */
 const NEWS = [
- {id:"n03", d:"2026.07", t:"적자 회사가 반년에 1조를 벌기까지", b:"한화가 인수한 지 약 3년, 옛 대우조선해양인 한화오션이 2026년 상반기 역대 최대 실적을 냈다. 앞으로 건조할 일감도 150척이 넘게 쌓여 있다.", s:"데일리안"},
- {id:"n04", d:"2026.02", t:"실패해도 비용은 우리가 낸다", b:"한화에어로스페이스가 협력사의 첨단 R&D 비용을 전액 지원하고, 성과와 지식재산권을 함께 나누는 300억 원 규모 성과공유제를 시작했다. 동반성장펀드도 500억에서 1,500억 원으로 늘렸다.", s:"뉴스핌, 디지털데일리"},
- {id:"n05", d:"2025.11", t:"민간이 처음 조립한 누리호", b:"누리호 4차 발사가 성공했다. 1~3차와 달리 체계종합기업인 한화에어로스페이스가 발사체 제작과 조립을 총괄한 첫 발사이자, 첫 야간 발사였다.", s:"사이언스타임즈, 뉴시스"},
- {id:"n06", d:"2025.11", t:"준우승 팀에 보낸 60대의 오렌지 휴대폰", b:"한국시리즈 준우승 직후 팬들에게 ‘가장 뜨겁게 응원해 준 여러분을 잊지 않겠다’는 현수막을 걸고, 선수단과 스태프 60명에게는 오렌지색 휴대폰과 격려 메시지를 보냈다.", s:"서울신문, 경향신문"},
- {id:"n07", d:"2025.10", t:"지든 이기든 쏘기로 한 불꽃", b:"한국시리즈 3차전, 구단주는 경기 결과와 관계없이 끝까지 자리를 지킨 팬들을 위해 불꽃쇼를 미리 준비했다. 1대 3으로 지던 경기가 8회 역전되면서 불꽃은 승리의 축포가 됐다.", s:"대전일보"},
- {id:"n10", d:"2024.12", t:"문 닫기 직전의 미국 조선소를 사다", b:"‘유령 조선소’라 불리던 미국 필리 조선소를 약 1억 달러에 인수했다. 한국 기업의 첫 미국 조선소 인수였고, 이후 이곳은 미국 조선소로는 50년 만에 LNG 운반선을 수주했다.", s:"경향신문, 핸드메이커"},
- {id:"n11", d:"2023.12", t:"정권이 바뀌어도 계약은 계약", b:"폴란드 정권 교체를 앞두고 K9 152문 2차 계약을 맺었지만, 새 집권 세력에서 ‘이전 정부의 계약은 무효가 될 수 있다’는 말이 나왔다. 이후 폴란드와의 협력은 정비와 신규 사업으로 넓어지고 있다.", s:"딜사이트"},
- {id:"n12", d:"2023.12", t:"코로나를 뚫고 간 성능시험", b:"출입국이 막힌 코로나19 시기에도 레드백 장갑차 개발진은 호주 현지 성능시험을 끝까지 마쳤고, 레드백은 호주 수출로 이어졌다.", s:"딜사이트"},
- {id:"n13", d:"2023.05", t:"15년 걸린 인수, 한화오션 출범", b:"2008년 처음 인수를 시도했던 대우조선해양이 한화오션으로 새로 출발했다. 누적 적자 개선, 인력 확보, 노조와의 관계 정립이 과제로 꼽혔다.", s:"파이낸셜리뷰, 굿모닝충청"},
- {id:"n14", d:"2023.05", t:"처음으로 발사대에 선 민간 기업", b:"누리호 3차 발사에서 체계종합기업으로 선정된 한화에어로스페이스가 처음으로 발사 운용에 참여했다. 실용급 위성을 실어 나른 첫 발사였다.", s:"한국항공우주연구원"},
+ {id:"a1", d:"2026.07", t:"해외 엔진을 뜯어보며 배우던 회사가", b:"1979년부터 해외 엔진을 면허 생산하며 기술을 익혀온 한화에어로스페이스가 국방과학연구소와 독자 개발한 무인기 엔진 2종의 시제를 처음 공개하고 지상시험에 들어갔다. 수천 시간을 쓸 수 있는 장수명 엔진 시제는 국내 처음이다. 한 연구원은 해외 엔진을 분해하며 배우던 시절을 떠올리며 눈물을 보였다.", s:"머니투데이방송, 세계일보"},
+ {id:"a2", d:"2026.06", t:"1년 반 늦어진 3조 원짜리 공장", b:"2023년 1월 미국에 잉곳부터 모듈까지 한곳에서 만드는 ‘솔라 허브’를 짓겠다고 발표했다. 2024년 말 완공 목표였지만 장비 반입이 늦어지며 일정이 밀렸고, 3조 2천억 원을 들여 2026년 6월에야 마지막 셀 라인을 완공했다. 미국에서 전 공정을 갖춘 유일한 태양광 생산기지다.", s:"뉴스핌, 허프포스트코리아"},
+ {id:"n04", d:"2026.02", t:"실패해도 비용은 우리가 낸다", b:"첨단 R&D는 실패 위험이 커서 작은 협력사는 엄두를 내기 어렵다. 한화에어로스페이스는 협력사의 개발비를 전액 부담하고, 성공하면 첫해 성과는 모두 협력사에 돌려주는 300억 원 규모 제도를 만들었다. 동반성장펀드도 500억에서 1,500억 원으로 늘렸다.", s:"뉴스핌, 디지털데일리"},
+ {id:"a3", d:"2025.12", t:"한 번 거절당한 인수, 다시 문을 두드리다", b:"2024년 호주 조선·방산기업 오스탈 인수를 추진했지만 오스탈 이사회의 반대로 무산됐다. 한화는 2025년 3월 장외에서 지분 9.9%를 사들이며 다시 나섰고, 미국 정부는 최대 100% 보유를, 호주 정부는 엄격한 조건 아래 19.9%까지를 승인했다.", s:"헤럴드경제, 아시아경제"},
+ {id:"n05", d:"2025.11", t:"실패하면 민간 책임인 첫 발사", b:"누리호 1~3차 발사는 한국항공우주연구원이 주관했다. 4차부터는 체계종합기업인 한화에어로스페이스가 발사체 제작과 조립을 총괄했다. 첫 야간 발사, 역대 최다인 13기 위성을 실은 이 발사는 성공했다.", s:"사이언스타임즈, 뉴시스"},
+ {id:"n07", d:"2025.10", t:"지든 이기든 쏘기로 한 불꽃", b:"한국시리즈 3차전, 지면 쓸쓸한 불꽃이 될 수도 있었다. 구단주는 경기 결과와 관계없이 끝까지 자리를 지킨 팬들을 위해 불꽃쇼를 미리 준비했다. 1대 3으로 지던 경기가 8회 역전되면서 불꽃은 승리의 축포가 됐다.", s:"대전일보"},
+ {id:"n10", d:"2024.12", t:"모두가 떠나던 ‘유령 조선소’를 사다", b:"미국 필리 조선소는 일감이 끊겨 ‘유령 조선소’로 불렸다. 미국 법상 외국 조선소는 미국 연안 상선 시장에 들어갈 수 없는 상황에서, 한화는 이 조선소를 약 1억 달러에 인수했다. 한국 기업 첫 미국 조선소 인수였고, 이후 미국 조선소로는 50년 만에 LNG 운반선을 수주했다.", s:"경향신문, 핸드메이커"},
+ {id:"n11", d:"2023.12", t:"정권이 바뀌어도 계약은 계약", b:"폴란드 정권 교체를 앞두고 K9 152문 2차 계약을 맺었지만, 새 집권 세력에서 ‘이전 정부의 계약은 무효가 될 수 있다’는 말이 나왔다. 이후에도 납품은 이어졌고, 폴란드와의 협력은 정비와 신규 사업으로 넓어지고 있다.", s:"딜사이트"},
+ {id:"n12", d:"2023.12", t:"국경이 닫힌 때의 성능시험", b:"코로나19로 나라 간 이동이 막힌 시기, 레드백 장갑차 개발진은 호주 현지로 가 성능시험을 끝까지 마쳤다. 레드백은 호주 수출 계약으로 이어졌다.", s:"딜사이트"},
+ {id:"n13", d:"2023.05", t:"15년 걸린 인수, 그다음 숙제", b:"대우조선해양이 한화오션으로 새로 출발했다. 누적 적자, 인력 확보, 노조와의 관계 정립이 숙제로 꼽혔다. 3년 뒤인 2026년 상반기, 한화오션은 옛 대우조선해양 시절을 포함해 역대 최대 실적을 냈다.", s:"굿모닝충청, 데일리안"},
  {id:"n15", d:"2022.09", t:"보증금을 잃었던 회사에 다시 서다", b:"2008년 대우조선해양 인수에 나서 이행보증금 3,150억 원을 냈다가 금융위기로 무산됐고, 긴 소송 끝에 일부만 돌려받았다. 14년 뒤 한화는 같은 회사 인수에 다시 나섰다.", s:"데일리안"},
- {id:"n16", d:"2022.08", t:"K9 수출 역사상 최대 계약", b:"폴란드와 3조 2천억 원 규모의 K9 자주포 1차 실행계약을 맺었다. 약속한 물량을 차질 없이 대기 위해 창원 3사업장 생산라인을 늘리고 인력을 추가로 채용했다.", s:"뉴스토마토, 보안뉴스"},
- {id:"n17", d:"2022.08", t:"협력사 20곳의 생산성을 함께 고치다", b:"한화 방산 4사가 한국생산성본부와 협약을 맺고, 중소 협력사 20곳에 전문가 현장 진단과 혁신 과제 개선을 지원하기로 했다.", s:"보안뉴스"},
- {id:"n18", d:"2022.06", t:"다시 쏘아 올린 누리호", b:"누리호 2차 발사가 성공하자 개발진에게 포상휴가와 별도 격려금이 주어졌다. 1차 발사의 아쉬움 뒤에 찾아온 성공이었다.", s:"아시아투데이"},
- {id:"n19", d:"2021.10", t:"실패한 날 도착한 과일바구니", b:"누리호 1차 발사에서 위성 모사체가 목표 궤도에 오르지 못한 직후, 엔진 개발에 참여한 임직원 80여 명에게 한 사람씩 이름을 적은 편지와 과일바구니가 전달됐다.", s:"아시아투데이"}
+ {id:"n16", d:"2022.08", t:"계약서에 서명한 다음이 진짜 시험", b:"폴란드와 맺은 K9 자주포 1차 실행계약은 3조 2천억 원, 당시 한 해 매출의 절반에 이르는 규모였다. 약속한 물량과 납기를 지키기 위해 창원 3사업장 생산라인을 늘리고 인력을 추가로 채용했다.", s:"뉴스토마토, 딜사이트, 보안뉴스"},
+ {id:"n17", d:"2022.08", t:"남의 공장 생산성을 함께 고치다", b:"한화 방산 4사가 한국생산성본부와 협약을 맺고, 중소 협력사 20곳에 전문가 현장 진단과 혁신 과제 개선을 지원하기로 했다. 우리 공장이 아니라 협력사 공장의 문제를 함께 들여다본 것이다.", s:"보안뉴스"},
+ {id:"n19", d:"2021.10", t:"실패한 날, 책임 대신 먼저 도착한 것", b:"누리호 1차 발사에서 위성 모사체가 목표 궤도에 오르지 못했다. 책임을 따지는 말이 나올 수 있는 순간, 엔진 개발에 참여한 임직원 80여 명에게 한 사람씩 이름을 적은 편지와 과일바구니가 먼저 도착했다. 이듬해 2차 발사는 성공했다.", s:"아시아투데이"}
 ];
 
 const STAGES = [
@@ -620,7 +619,7 @@ function cardHTML(c, withPeople){
     ${n?`<p class="small" style="color:#AEB9CC;margin:4px 0 0">${esc(n.b)}</p>`:""}
     <dl><dt>기사 속 한화는 무엇을 선택했나</dt><dd>${esc(c.what||"")}</dd>
     <dt>우리 조는 왜 이 가치로 읽었나</dt><dd>${esc(c.why||"")}</dd>
-    ${withPeople?`<dt>조원 개인 작성 (${ppl.filter(p=>p.action).length}/${ppl.length}명)</dt><dd>${ppl.map(p=>`<b>${esc(p.name)}</b> · 기사 속 직원이라면: ${esc(p.asIf||"-")}<br>나의 행동: ${esc(p.action||"-")}`).join("<br><br>")||"-"}</dd>`:""}</dl></article>`;
+    ${withPeople?`<dt>조원 개인 작성 (${ppl.filter(p=>p.action).length}/${ppl.length}명)</dt><dd>${ppl.map(p=>`<b>${esc(p.name)}</b> · 시험받는 순간: ${esc(p.asIf||"-")}<br>나의 행동: ${esc(p.action||"-")}`).join("<br><br>")||"-"}</dd>`:""}</dl></article>`;
 }
 function newsList(sel, clickable){
   return `<div class="pack">${NEWS.map(x=>`<${clickable?"button":"div"} class="pc ${x.id===sel?"on":""}" ${clickable?`data-news="${x.id}"`:""}><span class="py" style="font-size:15px">${x.d}</span><span><span class="pt">${esc(x.t)}</span><span class="pb">${esc(x.b)}</span><span class="src">출처: ${esc(x.s)}</span></span></${clickable?"button":"div"}>`).join("")}</div>`;
@@ -629,10 +628,11 @@ function mineHTML(){
   const me=S.me;
   return `<div class="card" style="margin-top:22px;border-color:var(--flame)">
     <div style="font-weight:800;font-size:16px">나의 생각 <span class="small mute" style="font-weight:500">· 조원 모두 각자 작성</span></div>
-    <label class="lb" for="m1" style="color:var(--ink);font-weight:700">내가 이 기사 속 직원이었다면?</label>
-    <textarea id="m1" data-m="asIf" rows="2" maxlength="200" placeholder="그 자리에 있었다면 나는 어떻게 했을까">${esc(S.mine?.asIf ?? me.asIf ?? "")}</textarea>
+    <label class="lb" for="m1" style="color:var(--ink);font-weight:700">내 업무에서 이 가치가 시험받을 것 같은 순간은?</label>
+    <p class="hint">전 직장 경험을 떠올려도 좋습니다</p>
+    <textarea id="m1" data-m="asIf" rows="2" maxlength="200" placeholder="예: 일정이 밀릴 때 협력사에 부담을 넘기고 싶어지는 순간">${esc(S.mine?.asIf ?? me.asIf ?? "")}</textarea>
     <label class="lb" for="m2" style="color:var(--ink);font-weight:700">나의 첫 100일 한화 DNA 행동 한 줄</label>
-    <p class="hint">내 자리에서 이 가치가 시험받는 순간, 나는 이렇게 하겠다</p>
+    <p class="hint">그 순간이 오면 나는 이렇게 하겠다</p>
     <textarea id="m2" data-m="action" rows="2" maxlength="80" placeholder="예: 모르는 건 먼저 묻고, 들은 건 끝까지 챙기겠습니다">${esc(S.mine?.action ?? me.action ?? "")}</textarea>
     <button class="ghost" id="minego" style="margin-top:12px;border-color:var(--flame);color:var(--ink)">${me.action?"수정 내용 저장":"나의 생각 제출"}</button>
     <div class="saved" id="minesaved">${me.action?"제출 완료 · 랩업 약속 카드로 이어집니다":""}</div></div>`;
@@ -645,7 +645,7 @@ function p2HTML(){
       <div class="role"><span class="ic">📰</span><span><b>기사 읽기</b>는 조원이 나눠 맡아 후보 기사를 추립니다.</span></div>
       <div class="role"><span class="ic">🎤</span><span><b>발표자 1명</b>은 갤러리 시간에 1분 동안 우리 조 해석을 소개합니다.</span></div>
       <div class="role"><span class="ic">🙋</span><span><b>모두</b> 각자 폰으로 ‘나의 생각’을 씁니다.</span></div></div>`;
-  const guide=`<div class="card small" style="line-height:1.7;margin-top:12px">기사팩 안에서 <b>누군가 무언가를 선택하거나 결단한 장면</b>을 골라 보세요. 정답 가치는 정해져 있지 않습니다. 신용·의리·도전·헌신·정도 중 여러 개로 읽어도 되고, 조원끼리 의견이 갈려도 좋습니다.</div>`;
+  const guide=`<div class="card small" style="line-height:1.7;margin-top:12px">기사팩 안에서 <b>누군가 무언가를 선택하거나 결단한 장면</b>을 골라 보세요. 정답 가치는 정해져 있지 않습니다. 신용·의리·도전·헌신·정도 중 여러 개로 읽어도 되고, 조원끼리 의견이 갈려도 좋습니다.<br><br><b style="color:#FFB48A">토론 질문</b> 우리가 이 결정을 내리는 사람이었다면 같은 선택을 했을까요? 망설였을 이유는 무엇이었을까요?</div>`;
   if(!c.rep){
     h+=`<div class="fade"><h2>오늘의 한화, 기사로 읽기</h2><p class="sub small">1부가 그때 회장님의 선택이었다면, 2부는 오늘 한화의 선택입니다. 기사 하나를 골라 우리 조의 해석을 남기고, 각자 ‘나라면’을 씁니다.</p>${guide}<h3>역할을 나눠요</h3>${roles}</div>`;
     btn=`<button class="go" id="claim">제가 대표로 작성할게요</button>`;
@@ -655,7 +655,7 @@ function p2HTML(){
   if(!isRep){
     h+=`<div class="fade"><h2>${esc(c.rep.name)}님이 우리 조 해석을 작성 중입니다</h2>
       ${c.submitted?`<div class="banner">✓ <span>우리 조 카드 <b>제출 완료</b></span></div>`:""}
-      <div style="margin-top:12px">${cardHTML({...c,team:t},false)}</div>
+      <div style="margin-top:12px">${cardHTML({...c,team:t},false)}</div>${n?guide:""}
       ${n?mineHTML():`<p class="small mute" style="margin-top:14px">대표가 기사를 고르면 ‘나의 생각’을 쓸 수 있습니다. 그동안 기사팩을 함께 읽어 주세요.</p>`}
       <h3>기사팩</h3><p class="hint">후보 기사를 대표에게 추천해 주세요. 선택은 대표가 합니다.</p>${newsList(c.news,false)}
       <h3>역할</h3>${roles}
@@ -720,7 +720,7 @@ function bindP(){
   el.querySelectorAll("[data-m]").forEach(inp=>inp.oninput=()=>{ S.mine={asIf:q("#m1").value, action:q("#m2").value}; const sv=q("#minesaved"); if(sv) sv.textContent="저장 전입니다 · 아래 버튼을 눌러 주세요"; });
   q("#minego")&&(q("#minego").onclick=async()=>{
     const asIf=q("#m1").value.trim(), action=q("#m2").value.trim();
-    if(!action){ q("#minesaved").textContent="행동 한 줄은 꼭 적어 주세요"; return; }
+    if(!asIf||!action){ q("#minesaved").textContent="두 칸 모두 적어 주세요"; return; }
     S.me={...S.me,asIf,action}; S.mine=null; await DB.put(`p:${S.pid}`,S.me); S.D[`p:${S.pid}`]=S.me; pPaint(); S.sig=psig();
   });
   // 랩업
@@ -813,7 +813,7 @@ function adminStage(st){
           <div class="ts">${(c.values||[]).map(k=>VAL[k].n).join("·")}</div><div class="ts" style="color:${c.submitted?"var(--ok)":"var(--mute)"};font-weight:600">${stt}</div></button>`}).join("")}</div>
       <p class="small mute" style="margin-top:10px">조를 누르면 조 해석과 조원 개인 작성 내용을 함께 볼 수 있습니다.</p>
       <h3>개인 작성 전체 <span class="mute" style="font-weight:500">${ps.filter(p=>p.action).length}/${ps.length}명 제출</span></h3>
-      <table class="t"><thead><tr><th style="width:60px">조</th><th style="width:90px">이름</th><th>내가 이 기사 속 직원이었다면</th><th>나의 첫 100일 행동</th></tr></thead><tbody>
+      <table class="t"><thead><tr><th style="width:60px">조</th><th style="width:90px">이름</th><th>내 업무에서 가치가 시험받는 순간</th><th>나의 첫 100일 행동</th></tr></thead><tbody>
       ${ind.map(p=>`<tr><td>${p.team}조</td><td>${esc(p.name)}</td><td>${esc(p.asIf||"-")}</td><td>${esc(p.action||"-")}</td></tr>`).join("")||`<tr><td colspan="4" class="mute">아직 작성한 사람이 없습니다.</td></tr>`}</tbody></table>`;
   }
   if(st==="gallery"){

@@ -75,6 +75,7 @@ h2{font-family:var(--hb);font-size:22px;margin:14px 0 6px;line-height:1.35}
 /* 기사 */
 .art{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin-bottom:12px;transition:border-color .2s,background .2s,transform .2s}
 .art.sel{border-color:var(--o);background:linear-gradient(160deg,rgba(242,103,34,.2),rgba(242,103,34,.04))}
+.art .no{display:inline-block;font-family:var(--hb);font-size:15px;color:var(--o2);margin-right:8px;letter-spacing:.04em}
 .art .y{display:inline-block;font-family:var(--hb);font-size:12px;letter-spacing:.06em;color:var(--o2);background:rgba(242,103,34,.14);padding:4px 10px;border-radius:999px}
 .art b{display:block;font-family:var(--hb);font-size:18px;margin:10px 0 6px;line-height:1.4}
 .art p{margin:0;color:var(--mute);line-height:1.6;font-size:14.5px}
@@ -170,7 +171,7 @@ const DNA_CFG={
   SUPABASE_URL:'https://alozfevclqzgkzkdncdy.supabase.co',
   SUPABASE_KEY:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsb3pmZXZjbHF6Z2t6a2RuY2R5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0ODQ5NDYsImV4cCI6MjEwODA2MDk0Nn0.jtDjVY9utojUZ1GYMAn0GKQ8UPTeDac1HIGtumUCGM8',
   TABLE:'kv',
-  JOIN_URL:'hahaha-dna.vercel.app', // 교육생에게 보여줄 조별 작성 페이지 주소
+  JOIN_URL:'hanwhadna.vercel.app', // 교육생에게 보여줄 조별 작성 페이지 주소
   TEAMS:10,
   CODE:'DNA1015'              // 기본 세션 코드 (진행자만 교안에서 바꿈 · 교육생은 입력하지 않음)
 };
@@ -318,7 +319,7 @@ function paint(){
 function listHTML(){
   return `<div class="rise"><h2>함께 읽고, 우리 조 기사 <span style="color:var(--o2)">1개</span>를 골라 주세요</h2>
   <p class="lead">“이 장면엔 우리 회사다운 무언가가 있다” 싶은 기사를 고르면 됩니다. 성과의 크기보다 그 뒤에 있는 사람들의 선택을 보세요.</p></div>
-  ${DNA_ARTICLES.map((a,k)=>`<div class="art ${draft.art===a.id?'sel':''}" data-id="${a.id}" style="animation:up .5s ${k*.04}s both"><span class="ck">✓</span><span class="y">${esc(a.y)}</span><b>${hw(esc(a.t))}</b><p>${hw(esc(a.s))}</p>
+  ${DNA_ARTICLES.map((a,k)=>`<div class="art ${draft.art===a.id?'sel':''}" data-id="${a.id}" style="animation:up .5s ${k*.04}s both"><span class="ck">✓</span><span class="no">${String(k+1).padStart(2,"0")}</span><span class="y">${esc(a.y)}</span><b>${hw(esc(a.t))}</b><p>${hw(esc(a.s))}</p>
     <div class="row">${a.url?`<a href="${esc(a.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>`:''}<button class="pick" data-pick="${a.id}">${draft.art===a.id?'선택됨 ✓':'이 기사로 정하기'}</button></div></div>`).join('')}`;
 }
 function writeHTML(){
